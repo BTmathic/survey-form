@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <title>Survey Form</title>
+        <link rel='icon' type='image/png' href='./favicon.png'/>
+        <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+    </head>
+
+    <body>
+      <div id='container'>
+        <h1 id='title'>Health planner</h1>
+        <p id='description'>Let's help you get your health in order</p>
+
+        <form id='survey-form'>
+          <fieldset id='about-you'>
+            <legend>About you</legend>
+            <div><label id='name-label'><div class='about-you-label'>Name: </div>
+              <input type='text' id='name' placeholder='Enter your name' required />
+            </div>
+            <div><label id='email-label'><div class='about-you-label'>Email: </div>
+              <input type='email' id='email' placeholder='Enter your email' required />
+            </div>
+            <div><label id='number-label'><div class='about-you-label'>Age: </div>
+              <input type='number' id='number' placeholder='Age' required min='1' max='130' />
+            </div>
+            <div id='sex'>Sex:
+              <input type='radio' name='sex' value='male' required>Male</input>
+              <input type='radio' name='sex' value='Female' required>Female</input>
+            </div>
+          </fieldset>
+          
+          <p>How long have you been active?</p>
+          <select id='dropdown'>
+            <option value='none'>Just starting</option>
+            <option value='one-two-months'>1-2 months</option>
+            <option value='few-months'>3-5 months</option>
+            <option value='half-year'>6-12 months</option>
+            <option value='one-two-years'>1-2 years</option>
+            <option value='few-years'>3-5 years</option>
+            <option value='many-years'>6-10 years</option>
+            <option value='many-many-years'>11-20 years</option>
+            <option value='more'>20+ years</option>
+          </select>
+          
+          <p>How many days a week can you get 30-60 minutes to exercise?</p>
+          <div id='radio-containers'>
+            
+              <div>
+                <input type='radio' name='days-of-activity' value='three'>3</input>
+              </div>
+              <div>
+                <input type='radio' name='days-of-activity' value='four'>4</input>
+              </div>
+            
+              <div>
+                <input type='radio' name='days-of-activity' value='five'>5</input>
+              </div>
+              <div>
+                <input type='radio' name='days-of-activity' value='six'>6</input>
+              </div>
+            
+          </div>
+          
+          <p>What kinds of activities would you be interested in?</p>
+          <div id='checkbox-options'>
+            <div class='checkbox-option'>
+              <input type='checkbox' name='name2' value='yes'>Strength training</input>
+            </div>
+            <div class='checkbox-option'>
+              <input type='checkbox' name='name2' value='no'>Running</input>
+            </div>
+            <div class='checkbox-option'>
+              <input type='checkbox' name='name2' value='maybe'>Cycling</input>
+            </div>
+            <div class='checkbox-option'>
+              <input type='checkbox' name='name2' value='maybe'>Swimming</input>
+            </div>
+            <div class='checkbox-option'>
+              <input type='checkbox' name='name2' value='maybe'>Climbing</input>
+            </div>
+            <div class='checkbox-option'>
+              <input type='checkbox' name='name2' value='maybe'>Team sport</input>
+            </div>
+          </div>
+
+          <p>Any special requirements for exercise? (E.g., injuries, current and former, congenital disorders, religious events such as fasting for Lent or Ramadan, etc...)</p>
+          <textarea
+            name='additional-comments'
+            rows='10' cols='30'
+            placeholder='Special requirements...'
+          ></textarea>
+
+          <div id='button-container'>
+            <button type='submit' id='submit'>Submit</button>
+          </div>
+        </form>
+        <div id='after-submit-message'>
+          Thank you for submitting your reponses. One of our coaches will be in touch soon to follow up.
+        </div>
+      </div>
+        
+      <script src="./bundle.js"></script>
+      <script>
+        let form = document.getElementById('survey-form');
+        form.onsubmit = function(e) {
+          e.preventDefault();
+          // if valid check needed?
+          document.getElementById('after-submit-message').style.visibility = 'visible';
+        }
+        
+      </script>
+    </body>
+</html>

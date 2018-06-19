@@ -1,0 +1,106 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: lighten(grey, 45%);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: $m-size;
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+#container {
+  background: lighten(grey, 30%);
+  border-radius: 25px;
+  margin: 10vh auto;
+  padding: 1px 20px 20px 20px;
+  width: 70%;
+}
+
+#about-you {
+  margin: 0 auto;
+  min-width: 300px;
+  width: 60%;
+}
+
+.about-you-label {
+  display: inline-block;
+  width: 50px;
+}
+
+form input {
+  margin: 3px 2px;
+  padding: 2px 0;
+}
+
+#radio-containers {
+  display: flex;
+  margin: 0 auto;
+  width: 185px;
+  div {
+    margin: 0 10px;
+  }
+}
+
+#checkbox-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 300px;
+  width: 100%;
+  div {
+    margin: 0 20px;
+  }
+}
+
+#button-container {
+  margin: 0 auto;
+  width: 100px;
+}
+
+form button {
+  background: blue;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  margin: 10px auto;
+  padding: 10px 20px;
+}
+
+#after-submit-message {
+  visibility: hidden;
+}
+
+@media (max-width: 500px) {
+  #about-you {
+    min-width: 175px;
+  }
+  
+  #name-label, #email-label {
+    display: block;
+    text-align: left;
+  }
+
+  #name, #email {
+    display: block;
+  }
+
+  .radio-container div {
+    display: inline;
+    margin: 4px 10px;
+  }
+
+  .checkbox-options {
+    margin-left: 0;
+  }
+}
