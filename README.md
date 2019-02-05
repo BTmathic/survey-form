@@ -8,6 +8,6 @@ A simple responsive display of different features available in form tags: inputs
 
 ### (Overkill) Build Tools
 
-* Webpack
+* Parcel
 * Yarn
 * Babel
